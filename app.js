@@ -1,5 +1,14 @@
 const http = require('http');
 
-http.createServer((req, res) => {
-  res.end("your Jenkins + Docker file is successfull.well done boy");
-}).listen(3000);
+const hostname = '0.0.0.0';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello from Jenkins CI/CD Pipeline with Docker!\n');
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
