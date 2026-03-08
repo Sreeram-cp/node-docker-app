@@ -6,7 +6,7 @@ const port = 3000;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello from Jenkins CI/CD Pipeline with Docker!\n');
+  res.end('ethi seriyavum orappanu!\n');
 });
 
 server.listen(port, hostname, () => {
